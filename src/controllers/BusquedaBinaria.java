@@ -42,7 +42,7 @@ public class BusquedaBinaria {
     }
     public int findProductIndexByNombre(Producto[] productos, String nombreBuscar) {
 
-    // ordenar
+      // ordenar
         sortProductByNombre(productos);
 
         int bajo = 0;
@@ -65,10 +65,12 @@ public class BusquedaBinaria {
 
                 bajo = centro + 1;
             }
-    }
+        }
+
+    
 
     return -1;
-}
+    }   
 
     private void sortProductByNombre(Producto[] productos) {
 
@@ -86,12 +88,10 @@ public class BusquedaBinaria {
                     productos[j + 1] = aux;
 
                     swap = true;
+                }    
             }
         }
 
-        if (!swap) {
-            break;
-        }
     }
 }
         

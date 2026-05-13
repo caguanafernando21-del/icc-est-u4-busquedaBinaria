@@ -7,7 +7,7 @@ public class App {
 
         Producto[] products = new  Producto[6];
         products[0] = new Producto("Laptop", 10 );
-        products[1] = new Producto("Smarphone", 20 );
+        products[1] = new Producto("Smartphone", 20 );
         products[2] = new Producto("Headphones", 2 );        
         products[3] = new Producto("Monitor", 5 );
         products[4] = new Producto("KeyBoard", 15 );
@@ -25,24 +25,29 @@ public class App {
 
         }else{
             System.out.println("No se encontro el producto en el stock: " + stockFind);
+  
+  
+  
         }    
-
         System.out.println("-------Nombre-------------");
-        
+
         BusquedaBinaria binaria2 = new BusquedaBinaria();
-        String stockFindHi = "Smarphone";
-        int indexResult2 = binaria2.findProdcutIndexByNombre(products, stockFindHi);
 
+        String stockFindHi = "Smartphone";
 
-        if(indexResult >=0){
-            System.out.println("Se encontro el producto");
-            System.out.println("La posicion: " + indexResult2);
-            System.out.println("Nombre: " + products[indexResult2].getName());
+        int indexResult2 =
+            binaria2.findProductIndexByNombre(products, stockFindHi);
 
-        }else{
-            System.out.println("No se encontro el producto en el stock: " + stockFind);
+        if (indexResult2 >= 0) {
+
+            System.out.println("Se encontró el producto");
+            System.out.println("Posición: " + indexResult2);
+
+            System.out.println(
+            "Nombre: " + products[indexResult2].getName());
+
+        } else {
+            System.out.println("No se encontró el producto: " + stockFindHi);
         }
-
-
     }
-}
+}    
